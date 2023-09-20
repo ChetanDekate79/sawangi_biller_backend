@@ -7,44 +7,46 @@ use Illuminate\Support\Facades\DB;
 use App\Model\energy; 
 use Illuminate\Support\Facades\Response;
 
-class EmptyRoomConsumptionReport_Controller extends Controller
+class Student_noconsumption_report_Controller extends Controller
 {
-    public function getemptyroomreport(Request $request)
+    public function getstudentnoconsumptionreport(Request $request)
     {
         // $date = $request->input('date');
         // $client_id = $request->input('client_id');
 
         $query = "
-        SELECT Q.*, (Q.selected_wh_max - Q.selected_wh_min) AS consumption
+        SELECT *
 FROM (
-    SELECT 
-        hk.dt_time,
-        r.hostel_id,  -- Include hostel_id from the rooms table
-        hk.device_id,
-        r.room_no,
-        r.room_id,
-        sa.student_id,
-        rm.phase,
-        CASE
-            WHEN rm.phase = 1 THEN max(hk.wh_1)
-            WHEN rm.phase = 2 THEN max(hk.wh_2)
-            WHEN rm.phase = 3 THEN max(hk.wh_3)
-        END AS selected_wh_max,
-        CASE
-            WHEN rm.phase = 1 THEN min(hk.wh_1)
-            WHEN rm.phase = 2 THEN min(hk.wh_2)
-            WHEN rm.phase = 3 THEN min(hk.wh_3)
-        END AS selected_wh_min
-   FROM rooms r
-LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
-LEFT JOIN room_mfd rm ON rm.room_id = r.room_id
-LEFT JOIN hourly_kwh hk ON hk.device_id = rm.device_id AND hk.client_id = rm.client_id
-WHERE sa.student_id IS NULL  -- Filter for rows where student_id is NULL
-AND DATE(hk.dt_time) = (select max(date(dt_time)) from hourly_kwh) -- Filter for a specific date
-GROUP BY r.room_no
-) Q
-HAVING consumption > 0.1
-ORDER BY hostel_id; -- Order by hostel_id instead of client_id
+    SELECT Q.*, Q.selected_wh_max - Q.selected_wh_min AS consumption
+    FROM (
+        SELECT 
+            hk.dt_time,
+            r.hostel_id,
+            hk.device_id,
+            r.room_no,
+            r.room_id,
+            sa.student_id,
+            rm.phase,
+            CASE
+                WHEN rm.phase = 1 THEN max(hk.wh_1)
+                WHEN rm.phase = 2 THEN max(hk.wh_2)
+                WHEN rm.phase = 3 THEN max(hk.wh_3)
+            END AS selected_wh_max,
+            CASE
+                WHEN rm.phase = 1 THEN min(hk.wh_1)
+                WHEN rm.phase = 2 THEN min(hk.wh_2)
+                WHEN rm.phase = 3 THEN min(hk.wh_3)
+            END AS selected_wh_min
+        FROM rooms r
+        LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
+        LEFT JOIN room_mfd rm ON rm.room_id = sa.room_id
+        LEFT JOIN hourly_kwh hk ON hk.client_id = rm.client_id AND hk.device_id = rm.device_id
+        WHERE DATE(hk.dt_time) = (select max(date(dt_time)) from hourly_kwh)
+        GROUP BY hk.client_id, r.room_no
+        ORDER BY hk.client_id, hk.dt_time, hk.device_id
+    ) Q
+) AS subquery
+WHERE subquery.consumption < 0.1;
         ";
 
         $results = DB::select($query);
@@ -61,7 +63,7 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
 
     $htmlContent = $this->generate_html($results);
 
-    return view('empty_room_consumption_report', ['htmlContent' => $htmlContent]);
+    return view('student_no_consumption_report', ['htmlContent' => $htmlContent]);
 }
     
 
@@ -78,7 +80,7 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
 
         return Response::make($pdfOutput, 200, [
             'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'attachment; filename="empty_room_consumption_report.pdf"'
+            'Content-Disposition' => 'attachment; filename="Student_with_no_consumption_report.pdf"'
         ]);
     }
 
@@ -96,7 +98,7 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
                 <td>' . $value->room_id . '</td>
                 <td>' . ($value->room_no ?? '') . '</td>
                 <td>' . ($value->phase ?? '') . '</td>
-                <td>' . ($value->consumption ?? '') . '</td>
+                <td>' . ($value->student_id ?? '') . '</td>
             </tr>';
             // Accumulate the sum for each column
         // $sum_ryb += $value->sum_ryb;
@@ -121,7 +123,7 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
                     <th>Room ID</th>
                     <th>Room No</th>
                     <th>Phase</th>
-                    <th>Consumption </th>
+                    <th>Student Id </th>
                 </tr>
             </thead>
             <tbody>' . $tableRows . '</tbody>';
@@ -186,7 +188,7 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
                     </div>
                 </center>
                 <hr>
-                <h3>Empty Rooms Consuption Report</h3>
+                <h3>Rooms with No Consuption Report</h3>
                 <table>' . $tableContent . '</table>
                 <footer class="footer">
                     <span class="page-number">[Page: ] </span>

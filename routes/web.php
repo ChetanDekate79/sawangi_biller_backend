@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\HostelConsumptionReport_Controller;
+use App\Http\Controllers\EmptyRoomConsumptionReport_Controller;
+use App\Http\Controllers\Student_noconsumption_report_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +61,9 @@ Route::any('{catchall}', function() {
  });
 
  Route::post('/download-pdf', 'HostelConsumptionReport_Controller@downloadPDF')->name('download-pdf');
+
+ Route::post('/empty_room_report', 'EmptyRoomConsumptionReport_Controller@downloadPDF')->name('empty_room_report');
+
+ Route::post('/student_no_consumption_report', 'Student_noconsumption_report_Controller@downloadPDF')->name('student_no_consumption_report');
+
+

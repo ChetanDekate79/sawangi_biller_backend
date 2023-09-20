@@ -14,12 +14,15 @@ use App\Http\Controllers\HostelConsumption_Controller;
 use App\Http\Controllers\HostelConsumptionReport_Controller;
 use App\Http\Controllers\EmptyRoomConsumptionReport_Controller;
 use App\Http\Controllers\Generate_HourlyData_Controller;
+use App\Http\Controllers\Student_noconsumption_report_Controller;
+
 use App\Http\Controllers\demo_controller;
 
 Route::get("/demo",[demo_controller::class,'demo']);
 
 Route::get('/empty_room_report', [EmptyRoomConsumptionReport_Controller::class, 'getemptyroomreport']);
 
+Route::get('/student_noconsumption_report', [Student_noconsumption_report_Controller::class, 'getstudentnoconsumptionreport']);
 
 Route::get('/generate_hourly_data/{folder}/{date}/{id}', [Generate_HourlyData_Controller::class, 'generate_data']);
 

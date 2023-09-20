@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Energy Consumption Report</title>
+    <!-- <title>Energy Consumption Report</title> -->
 </head>
 <body>
     <div>
         <!-- Include the report display HTML here -->
-        <h3>Energy Consumption Report</h3>
+        <!-- <h3>Energy Consumption Report</h3> -->
         <?php echo $htmlContent; ?>
 
     </div>

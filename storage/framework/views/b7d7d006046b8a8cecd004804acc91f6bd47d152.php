@@ -7,10 +7,11 @@
     <div>
         <!-- Include the report display HTML here -->
         <!-- <h3>Energy Consumption Report</h3> -->
-        {!! $htmlContent !!}
+        <?php echo $htmlContent; ?>
+
     </div>
-    <form id="pdfDownloadForm" action="{{ route('download-pdf') }}" method="POST" style="display: none;">
-        @csrf
+    <form id="pdfDownloadForm" action="<?php echo e(route('empty_room_report')); ?>" method="POST" style="display: none;">
+        <?php echo csrf_field(); ?>
         <input type="hidden" name="htmlContent" id="htmlContentInput">
     </form>
     <button id="downloadPdfBtn">Download PDF</button>
@@ -18,7 +19,7 @@
     <script>
         document.getElementById("downloadPdfBtn").addEventListener("click", function() {
             // Get the HTML content from the report display
-            var htmlContent = {!! json_encode($htmlContent) !!};
+            var htmlContent = <?php echo json_encode($htmlContent); ?>;
             
             // Set the HTML content in the hidden input field
             document.getElementById("htmlContentInput").value = htmlContent;
@@ -29,3 +30,4 @@
     </script>
 </body>
 </html>
+<?php /**PATH F:\wardha\Sawangi_Biller_Backend\resources\views/empty_room_consumption_report.blade.php ENDPATH**/ ?>

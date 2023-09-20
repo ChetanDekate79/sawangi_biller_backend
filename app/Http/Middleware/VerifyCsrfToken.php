@@ -20,5 +20,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'download-pdf', // Add your API route here
+        'empty_room_report',
+        'student_no_consumption_report',
     ];
 }

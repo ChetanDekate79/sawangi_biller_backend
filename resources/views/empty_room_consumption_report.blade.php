@@ -9,7 +9,7 @@
         <!-- <h3>Energy Consumption Report</h3> -->
         {!! $htmlContent !!}
     </div>
-    <form id="pdfDownloadForm" action="{{ route('download-pdf') }}" method="POST" style="display: none;">
+    <form id="pdfDownloadForm" action="{{ route('empty_room_report') }}" method="POST" style="display: none;">
         @csrf
         <input type="hidden" name="htmlContent" id="htmlContentInput">
     </form>
