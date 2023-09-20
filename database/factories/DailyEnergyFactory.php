@@ -1,0 +1,75 @@
+<?php
+
+/* @var $factory \Illuminate\Database\Eloquent\Factory */
+
+use App\model\daily_energy;
+use App\model\energy_device_detail;
+use Faker\Generator as Faker;
+
+$factory->define(daily_energy::class, function (Faker $faker) {
+    return [
+        'date' =>  $faker->date($format = 'Y-m-d', $max = 'now'),
+        'date_time' =>  $faker->dateTime($max = 'now', $timezone = null),
+        'device_id' =>  $faker->randomElement( \DB::table('energy_device_details')->select('device_id')->get())->device_id,
+        'logger_id' =>  $faker->randomElement( \DB::table('energy_device_details')->select('logger_id')->get())->logger_id,
+        'rs485_1' =>  $faker->numberBetween(1,1000),
+        'rs485_2' =>  $faker->numberBetween(1,1000),
+        'rs485_3' =>  $faker->numberBetween(1,1000),
+        'rs485_4' =>  $faker->numberBetween(1,1000),
+        'rs485_5' =>  $faker->numberBetween(1,1000),
+        'rs485_6' =>  $faker->numberBetween(1,1000),
+        'rs485_7' =>  $faker->numberBetween(1,1000),
+        'rs485_8' =>  $faker->numberBetween(1,1000),
+        'rs485_9' =>  $faker->numberBetween(1,1000),
+        'rs485_10' =>  $faker->numberBetween(1,1000),
+        'rs485_11' =>  $faker->numberBetween(1,1000),
+        'rs485_12' =>  $faker->numberBetween(1,1000),
+        'rs485_13' =>  $faker->numberBetween(1,1000),
+        'rs485_14' =>  $faker->numberBetween(1,1000),
+        'rs485_15' =>  $faker->numberBetween(1,1000),
+        'rs485_16' =>  $faker->numberBetween(1,1000),
+        'rs485_17' =>  $faker->numberBetween(1,1000),
+        'rs485_18' =>  $faker->numberBetween(1,1000),
+        'rs485_19' =>  $faker->numberBetween(1,1000),
+        'rs485_20' =>  $faker->numberBetween(1,1000),
+        'rs485_21' =>  $faker->numberBetween(1,1000),
+        'rs485_22' =>  $faker->numberBetween(1,1000),
+        'rs485_23' =>  $faker->numberBetween(1,1000),
+        'rs485_24' =>  $faker->numberBetween(1,1000),
+        'rs485_25' =>  $faker->numberBetween(1,1000),
+        'rs485_26' =>  $faker->numberBetween(1,1000),
+        'rs485_27' =>  $faker->numberBetween(1,1000),
+        'rs485_28' =>  $faker->numberBetween(1,1000),
+        'rs485_29' =>  $faker->numberBetween(1,1000),
+        'rs485_30' =>  $faker->numberBetween(1,1000),
+        'rs485_31' =>  $faker->numberBetween(1,1000),
+        'rs485_32' =>  $faker->numberBetween(1,1000),
+        'rs485_33' =>  $faker->numberBetween(1,1000),
+        'rs485_34' =>  $faker->numberBetween(1,1000),
+        'rs485_35' =>  $faker->numberBetween(1,1000),
+        'rs485_36' =>  $faker->numberBetween(1,1000),
+        'rs485_37' =>  $faker->numberBetween(1,1000),
+        'rs485_38' =>  $faker->numberBetween(1,1000),
+        'rs485_39' =>  $faker->numberBetween(1,1000),
+        'rs485_40' =>  $faker->numberBetween(1,1000),
+        'rs485_41' =>  $faker->numberBetween(1,1000),
+        'rs485_42' =>  $faker->numberBetween(1,1000),
+        'rs485_43' =>  $faker->numberBetween(1,1000),
+        'rs485_44' =>  $faker->numberBetween(1,1000),
+        'rs485_45' =>  $faker->numberBetween(1,1000),
+        'rs485_46' =>  $faker->numberBetween(1,1000),
+        'rs485_47' =>  $faker->numberBetween(1,1000),
+        'rs485_48' =>  $faker->numberBetween(1,1000),
+        'energy' =>  $faker->numberBetween(1,1000),
+        'kwh' =>  $faker->numberBetween(1,1000),
+        'kwh_min' =>  $faker->numberBetween(1,1000),
+        'kwh_max' =>  $faker->numberBetween(1,1000),
+        'kwh_avg' =>  $faker->numberBetween(1,1000),
+        'off_time' =>  $faker->numberBetween(1,1000),
+        'running_time' =>  $faker->numberBetween(1,1000),
+        'idle_time' =>  $faker->numberBetween(1,1000),
+        'production' =>  $faker->numberBetween(1,1000),
+        'eff' =>  $faker->numberBetween(1,1000)
+
+    ];
+});
