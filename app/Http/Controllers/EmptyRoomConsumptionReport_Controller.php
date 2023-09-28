@@ -18,33 +18,33 @@ class EmptyRoomConsumptionReport_Controller extends Controller
         SELECT Q.*, (Q.selected_wh_max - Q.selected_wh_min) AS consumption
 FROM (
     SELECT 
-        hk.dt_time,
-        r.hostel_id,  -- Include hostel_id from the rooms table
+    DATE(hk.dt_time) AS date,
+        r.hostel_id, 
         hk.device_id,
         r.room_no,
         r.room_id,
         sa.student_id,
-        rm.phase,
+        rm.`phase`,
         CASE
-            WHEN rm.phase = 1 THEN max(hk.wh_1)
-            WHEN rm.phase = 2 THEN max(hk.wh_2)
-            WHEN rm.phase = 3 THEN max(hk.wh_3)
+            WHEN rm.`phase` = 1 THEN max(hk.wh_1)
+            WHEN rm.`phase` = 2 THEN max(hk.wh_2)
+            WHEN rm.`phase` = 3 THEN max(hk.wh_3)
         END AS selected_wh_max,
         CASE
-            WHEN rm.phase = 1 THEN min(hk.wh_1)
-            WHEN rm.phase = 2 THEN min(hk.wh_2)
-            WHEN rm.phase = 3 THEN min(hk.wh_3)
+            WHEN rm.`phase` = 1 THEN min(hk.wh_1)
+            WHEN rm.`phase` = 2 THEN min(hk.wh_2)
+            WHEN rm.`phase` = 3 THEN min(hk.wh_3)
         END AS selected_wh_min
    FROM rooms r
 LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
 LEFT JOIN room_mfd rm ON rm.room_id = r.room_id
 LEFT JOIN hourly_kwh hk ON hk.device_id = rm.device_id AND hk.client_id = rm.client_id
-WHERE sa.student_id IS NULL  -- Filter for rows where student_id is NULL
-AND DATE(hk.dt_time) = (select max(date(dt_time)) from hourly_kwh) -- Filter for a specific date
-GROUP BY r.room_no
+WHERE sa.student_id IS NULL  
+AND DATE(hk.dt_time) = (select max(date(dt_time)) from hourly_kwh)
+GROUP BY r.room_no,hk.device_id
 ) Q
 HAVING consumption > 0.1
-ORDER BY hostel_id; -- Order by hostel_id instead of client_id
+ORDER BY hostel_id
         ";
 
         $results = DB::select($query);
@@ -93,9 +93,9 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
         foreach ($results as $value) {
             $tableRows .= '<tr>
                 <td>' . $value->hostel_id . '</td>
-                <td>' . $value->room_id . '</td>
+              
                 <td>' . ($value->room_no ?? '') . '</td>
-                <td>' . ($value->phase ?? '') . '</td>
+               
                 <td>' . ($value->consumption ?? '') . '</td>
             </tr>';
             // Accumulate the sum for each column
@@ -113,14 +113,15 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
 //     <td>' . $sum_common_area . '</td>
 //     <td>' . $percentage . '</td>
 // </tr>';
-
-        $tableContent = '
+// Assuming $results contains the 'date' field
+$date = isset($results[0]->date) ? $results[0]->date : '';  // Assuming 'date' is in the first result
+$tableContent = '
             <thead>
                 <tr>
                     <th>Hostel ID</th>
-                    <th>Room ID</th>
+                 
                     <th>Room No</th>
-                    <th>Phase</th>
+                    
                     <th>Consumption </th>
                 </tr>
             </thead>
@@ -129,7 +130,7 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
         $htmlContent = '
             <html>
             <head>
-                <title>JNMC</title>
+                <title>JNMC-'. $date . '</title>
                 <style>
                     body {
                         font-family: "Comic Sans MS", cursive, sans-serif;
@@ -184,9 +185,10 @@ ORDER BY hostel_id; -- Order by hostel_id instead of client_id
                 <center>
                     <div>
                     </div>
+                    </div>
                 </center>
                 <hr>
-                <h3>Empty Rooms Consuption Report</h3>
+                <h3>Empty Rooms Consuption Report - ' . $date . ' </h3>
                 <table>' . $tableContent . '</table>
                 <footer class="footer">
                     <span class="page-number">[Page: ] </span>
