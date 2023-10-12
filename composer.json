@@ -16,6 +16,7 @@
         "laravel/tinker": "^1.0",
         "league/csv": "^9.7",
         "nesbot/carbon": "^2.68",
+        "phpoffice/phpspreadsheet": "^1.25",
         "tymon/jwt-auth": "^1.0.0-beta.3@dev"
     },
     "require-dev": {

@@ -15,7 +15,7 @@ class LoginControllernew extends Controller
         $ipAddress = $request->getClientIp();
 
         // Build your SQL query to check if the user exists and the password is correct
-        $query = "SELECT email, password, login_count FROM users WHERE email = ? AND STATUS = 1";
+        $query = "SELECT email, password, login_count,user_type FROM users WHERE email = ? AND STATUS = 1";
 
         // Execute the query with parameter binding
         $user = DB::selectOne($query, [$email]);
@@ -30,7 +30,7 @@ class LoginControllernew extends Controller
             $this->logLoginData($user->email, $user->login_count + 1, $ipAddress);
 
             // Return a success response or redirect to the dashboard
-            return response()->json(['message' => 'Login successful', 'login_count' => $user->login_count + 1], 200);
+            return response()->json(['message' => 'Login successful', 'login_count' => $user->login_count + 1,'user_type'=>$user->user_type], 200);
         } else {
             // Invalid email or password
             return response()->json(['message' => 'Invalid email or password'], 401);

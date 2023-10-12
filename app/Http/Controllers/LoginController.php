@@ -10,7 +10,7 @@ class LoginController extends Controller
     public function executeQuery()
     {
         // Build your SQL query
-        $query = "SELECT email, password FROM users WHERE STATUS =1";
+        $query = "SELECT email, password, FROM users WHERE STATUS =1";
 
         // Execute the query
         $results = DB::select($query);

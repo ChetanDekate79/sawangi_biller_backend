@@ -1,102 +1,66 @@
 <?php
 
 namespace App\Http\Controllers;
-use Dompdf\Dompdf;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use App\Model\energy; 
+use Dompdf\Dompdf;
 use Illuminate\Support\Facades\Response;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-class Student_noconsumption_report_Controller extends Controller
+class Billing_Report_Controller extends Controller
 {
-    public function getstudentnoconsumptionreport(Request $request)
-    {
-        // $date = $request->input('date');
-        // $client_id = $request->input('client_id');
+    public function billing_report($hostel,$year,$month,$rate){
 
-        $query = "
-        SELECT
-        subquery.dt_time,
-        subquery.hostel_id,
-        subquery.device_id,
-        subquery.room_no,
-        subquery.room_id,
-        GROUP_CONCAT(DISTINCT subquery.student_id ORDER BY subquery.hostel_id) AS student_ids,
-        subquery.`phase`,
-        max_subquery.selected_wh_max,
-        min_subquery.selected_wh_min,
-        max_subquery.selected_wh_max - min_subquery.selected_wh_min AS consumption
+        $query = "SELECT 
+        Q.*, 
+        Q.max_wh - Q.min_wh AS units,
+        COUNT(Q.room_no) OVER (PARTITION BY Q.dt_time, Q.room_no) AS room_no_count,
+        ROUND((Q.max_wh - Q.min_wh) / COUNT(Q.room_no) OVER (PARTITION BY Q.dt_time, Q.room_no),0) AS each_units,
+       ? AS rate,
+        ROUND(((Q.max_wh - Q.min_wh) / COUNT(Q.room_no) OVER (PARTITION BY Q.dt_time, Q.room_no)),0) * ? AS Amount  
     FROM (
-        SELECT
-            hk.dt_time,
+        -- Your existing query here
+        SELECT 
+            DATE(hk.dt_time) AS dt_time,
+            hk.client_id,
             hk.device_id,
             r.room_no,
             r.room_id,
             sa.student_id,
-            rm.`phase`,
-            r.hostel_id
+            rm.phase,
+            MAX(
+                CASE 
+                    WHEN rm.phase = 1 THEN hk.wh_1
+                    WHEN rm.phase = 2 THEN hk.wh_2
+                    WHEN rm.phase = 3 THEN hk.wh_3
+                END
+            ) AS max_wh,
+            MIN(
+                CASE 
+                    WHEN rm.phase = 1 THEN hk.wh_1
+                    WHEN rm.phase = 2 THEN hk.wh_2
+                    WHEN rm.phase = 3 THEN hk.wh_3
+                END
+            ) AS min_wh
         FROM rooms r
         LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
         LEFT JOIN room_mfd rm ON rm.room_id = sa.room_id
         LEFT JOIN hourly_kwh hk ON hk.client_id = rm.client_id AND hk.device_id = rm.device_id
-        WHERE DATE(hk.dt_time) = (SELECT MAX(DATE(dt_time)) FROM hourly_kwh)
-        GROUP BY rm.room_id, sa.student_id, hk.dt_time, rm.`phase`, hk.device_id, r.hostel_id
-    ) AS subquery
-    LEFT JOIN (
-        SELECT
-            rm.room_id,
-            hk.device_id,
-            rm.`phase`,
-            MAX(CASE WHEN rm.`phase` = 1 THEN hk.wh_1
-                     WHEN rm.`phase` = 2 THEN hk.wh_2
-                     WHEN rm.`phase` = 3 THEN hk.wh_3 END) AS selected_wh_max
-        FROM rooms r
-        LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
-        LEFT JOIN room_mfd rm ON rm.room_id = sa.room_id
-        LEFT JOIN hourly_kwh hk ON hk.client_id = rm.client_id AND hk.device_id = rm.device_id
-        WHERE DATE(hk.dt_time) = (SELECT MAX(DATE(dt_time)) FROM hourly_kwh)
-        GROUP BY rm.room_id, hk.device_id, rm.`phase`
-    ) AS max_subquery ON subquery.room_id = max_subquery.room_id AND subquery.device_id = max_subquery.device_id AND subquery.`phase` = max_subquery.`phase`
-    
-    LEFT JOIN (
-        SELECT
-            rm.room_id,
-            hk.device_id,
-            rm.`phase`,
-            MIN(CASE WHEN rm.`phase` = 1 THEN hk.wh_1
-                     WHEN rm.`phase` = 2 THEN hk.wh_2
-                     WHEN rm.`phase` = 3 THEN hk.wh_3 END) AS selected_wh_min
-        FROM rooms r
-        LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
-        LEFT JOIN room_mfd rm ON rm.room_id = sa.room_id
-        LEFT JOIN hourly_kwh hk ON hk.client_id = rm.client_id AND hk.device_id = rm.device_id
-        WHERE DATE(hk.dt_time) = (SELECT MAX(DATE(dt_time)) FROM hourly_kwh)
-        GROUP BY rm.room_id, hk.device_id, rm.`phase`
-    ) AS min_subquery ON subquery.room_id = min_subquery.room_id AND subquery.device_id = min_subquery.device_id AND subquery.`phase` = min_subquery.`phase`
-    WHERE max_subquery.selected_wh_max - min_subquery.selected_wh_min < 0.1
-    GROUP BY subquery.device_id, subquery.`phase`
-    HAVING COUNT(*) > 1
-    ORDER BY subquery.hostel_id ASC;
-        ";
+        WHERE MONTH(hk.dt_time) = ? AND YEAR(hk.dt_time) = ? AND r.hostel_id= ?
+        GROUP BY DATE(hk.dt_time), hk.client_id, hk.device_id, rm.phase, r.room_no, sa.student_id
+        ORDER BY DATE(hk.dt_time)
+    ) Q;";
 
-        $results = DB::select($query);
+    $result = DB::select($query,[$rate, $rate,$month, $year, $hostel]);
 
-        // // return response()->json($results);
-        // return $this->generate_html($client_id, $date, $results);
+    // return response()->json($result);
+    $htmlContent = $this->generate_html($result);
 
-
-    //     // Update the hour of the last row if it's 0
-    // $lastRow = end($results);
-    // if ($lastRow && $lastRow->HOUR === 0) {
-    //     $lastRow->HOUR = 24;
-    // }
-
-    $htmlContent = $this->generate_html($results);
-
-    return view('student_no_consumption_report', ['htmlContent' => $htmlContent]);
+    return view('billing_report', ['htmlContent' => $htmlContent]);
 }
     
-
     public function downloadPDF(Request $request)
     {
         $htmlContent = $request->input('htmlContent');
@@ -118,17 +82,23 @@ class Student_noconsumption_report_Controller extends Controller
     {
         $energy = new energy();
         $tableRows = '';
-        $sum_ryb = 0;
-        $sum_total = 0;
-        $sum_common_area = 0;
+        // $sum_ryb = 0;
+        // $sum_total = 0;
+        // $sum_common_area = 0;
 
         foreach ($results as $value) {
             $tableRows .= '<tr>
-                <td>' . $value->hostel_id . '</td>
+                <td>' . $value->dt_time . '</td>
+                <td>' . $value->client_id . '</td>
                 <td>' . $value->room_id . '</td>
                 <td>' . ($value->room_no ?? '') . '</td>
                 <td>' . ($value->phase ?? '') . '</td>
                 <td>' . ($value->student_id ?? '') . '</td>
+                <td>' . ($value->units ?? '') . '</td>
+                <td>' . ($value->room_no_count ?? '') . '</td>
+                <td>' . ($value->each_units ?? '') . '</td>
+                <td>' . ($value->rate ?? '') . '</td>
+                <td>' . ($value->Amount ?? '') . '</td>
             </tr>';
             // Accumulate the sum for each column
         // $sum_ryb += $value->sum_ryb;
@@ -149,11 +119,17 @@ class Student_noconsumption_report_Controller extends Controller
         $tableContent = '
             <thead>
                 <tr>
-                    <th>Hostel ID</th>
+                    <th>Date</th>
+                    <th>Hostel</th>
                     <th>Room ID</th>
                     <th>Room No</th>
                     <th>Phase</th>
                     <th>Student Id </th>
+                    <th>Total Units</th>
+                    <th>No. of Students</th>
+                    <th>Each Units</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
                 </tr>
             </thead>
             <tbody>' . $tableRows . '</tbody>';
@@ -231,6 +207,26 @@ class Student_noconsumption_report_Controller extends Controller
 
         return $htmlContent;
     }
+
+    public function downloadExcel(Request $request)
+{
+    $htmlContent = $request->input('htmlContent');
+
+    // Load HTML content into a PhpSpreadsheet object
+    $spreadsheet = new Spreadsheet();
+    $spreadsheet->getActiveSheet()->setCellValue('A1', $htmlContent);
+
+    $writer = new Xlsx($spreadsheet);
+    
+    ob_start();
+    $writer->save('php://output');
+    $excelOutput = ob_get_clean();
+
+    return response()->make($excelOutput, 200, [
+        'Content-Type' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'Content-Disposition' => 'attachment; filename="Billing_Report.xlsx"'
+    ]);
+}
 
     public function generate_error_html($errorMessage)
     {

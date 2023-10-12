@@ -15,8 +15,10 @@ use App\Http\Controllers\HostelConsumptionReport_Controller;
 use App\Http\Controllers\EmptyRoomConsumptionReport_Controller;
 use App\Http\Controllers\Generate_HourlyData_Controller;
 use App\Http\Controllers\Student_noconsumption_report_Controller;
-
+use App\Http\Controllers\Billing_Report_Controller;
 use App\Http\Controllers\demo_controller;
+
+Route::get('/billing-report/{hostel}/{year}/{month}/{rate}', [Billing_Report_Controller::class, 'billing_report']);
 
 Route::get("/demo",[demo_controller::class,'demo']);
 
@@ -25,6 +27,9 @@ Route::get('/empty_room_report', [EmptyRoomConsumptionReport_Controller::class, 
 Route::get('/student_noconsumption_report', [Student_noconsumption_report_Controller::class, 'getstudentnoconsumptionreport']);
 
 Route::get('/generate_hourly_data/{folder}/{date}/{id}', [Generate_HourlyData_Controller::class, 'generate_data']);
+
+Route::get('/generate_hourly_data_all/{folder}/{date}', [Generate_HourlyData_Controller::class, 'generate_data_all']);
+
 
 Route::post('/download-pdf', 'HostelConsumptionReport_Controller@downloadPDF')->name('download-pdf');
 
