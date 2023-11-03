@@ -17,8 +17,16 @@ use App\Http\Controllers\Generate_HourlyData_Controller;
 use App\Http\Controllers\Student_noconsumption_report_Controller;
 use App\Http\Controllers\Billing_Report_Controller;
 use App\Http\Controllers\demo_controller;
+use App\Http\Controllers\Monthly_Report_Controller;
 
-Route::get('/billing-report/{hostel}/{year}/{month}/{rate}', [Billing_Report_Controller::class, 'billing_report']);
+Route::get('/room-list/{hostel}', [Billing_Report_Controller::class, 'getDistinctRoomNumbers']);
+
+
+Route::get('/monthly_consumption_report/{client_id}/{Month}/{Year}', [Monthly_Report_Controller::class, 'gethostelData']);
+
+Route::get('/billing-report-monthly/{hostel}/{room}/{start_date}/{end_date}/{rate}/{comm_area}', [Billing_Report_Controller::class, 'billing_report_monthly']);
+
+Route::get('/billing-report/{hostel}/{room}/{start_date}/{end_date}/{rate}', [Billing_Report_Controller::class, 'billing_report']);
 
 Route::get("/demo",[demo_controller::class,'demo']);
 
@@ -52,6 +60,8 @@ Route::get('/host', [Device_DetailsController::class, 'host']);
 Route::get('/hostel', [Device_DetailsController::class, 'hostel']);
 
 Route::get('/device', [Device_DetailsController::class, 'device']);
+
+Route::get('/room', [Device_DetailsController::class, 'room']);
 
 Route::post('/loginnew', [LoginControllernew::class, 'executeQuery']);
 

@@ -68,3 +68,7 @@ Route::any('{catchall}', function() {
  Route::post('/student_no_consumption_report', 'Student_noconsumption_report_Controller@downloadPDF')->name('student_no_consumption_report');
 
  Route::post('/billing_report', 'Billing_Report_Controller@downloadExcel')->name('billing_report');
+
+ Route::post('/bill_pdf', 'Billing_Report_Controller@downloadPDF')->name('bill_pdf');
+
+ Route::post('/billing-report/download-csv', 'Billing_Report_Controller@downloadCsv')->name('billing_report.download_csv');

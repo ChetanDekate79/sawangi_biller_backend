@@ -1,0 +1,2149 @@
+[2023-10-18 11:40:43] asus.ERROR: Undefined property: stdClass::$Hostel_kwh {"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$Hostel_kwh at F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php:123)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(123): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', 'F:\\\\wardha\\\\Sawan...', 123, Array)
+#1 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(89): App\\Http\\Controllers\\Monthly_Report_Controller->generate_html(Array)
+#2 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#5 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#45 {main}
+"} 
+[2023-10-18 11:43:28] asus.ERROR: Undefined property: stdClass::$client_id {"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$client_id at F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php:122)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(122): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', 'F:\\\\wardha\\\\Sawan...', 122, Array)
+#1 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(89): App\\Http\\Controllers\\Monthly_Report_Controller->generate_html(Array)
+#2 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#5 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#45 {main}
+"} 
+[2023-10-18 11:44:50] asus.ERROR: Undefined property: stdClass::$Hostel_Load {"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$Hostel_Load at F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php:126)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(126): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', 'F:\\\\wardha\\\\Sawan...', 126, Array)
+#1 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(90): App\\Http\\Controllers\\Monthly_Report_Controller->generate_html(Array)
+#2 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#5 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#45 {main}
+"} 
+[2023-10-18 14:28:54] asus.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sawangi_biller.jnmc_all_kwh' doesn't exist (SQL: 
+        SELECT
+        HOUR(q2.dt_time) AS HOUR,
+        q2.dt_time,
+        q2.HOST,
+        q2.device_id,
+        q2.wh_R - q1.wh_R AS value,
+        q2.wh_D - q1.wh_D AS value1,
+        q2.wh_1 - q1.wh_1 AS value2,
+        q2.wh_2 - q1.wh_2 AS value3,
+         q2.wh_3 - q1.wh_3 AS value4,
+        q1.wh_R  AS wh_R,
+        q1.wh_D  AS wh_D,
+        q1.wh_1  AS wh_1,
+        q1.wh_2  AS wh_2,
+        q1.wh_3  AS wh_3
+    FROM
+        (
+            SELECT dt_time, HOUR, HOST, device_id,
+               FLOOR(wh_R/1000 ) AS wh_R,  
+                FLOOR(wh_D / 1000) AS wh_D, 
+               FLOOR(wh_1 / 1000) AS wh_1,
+                FLOOR(wh_2 / 1000) AS wh_2,
+             FLOOR(wh_3 / 1000) AS wh_3
+            FROM jnmc_all_kwh
+            WHERE DATE(dt_time) = ? 
+            AND HOUR = 23
+            AND HOST = ?
+            AND device_id = ?
+        ) q1
+    
+    LEFT JOIN
+    
+        (
+            SELECT dt_time, HOUR, HOST, device_id, 
+               FLOOR(wh_R/1000 ) AS wh_R, 
+               FLOOR(wh_D / 1000) AS wh_D,
+                FLOOR(wh_1 / 1000) AS wh_1,
+                FLOOR(wh_2 / 1000) AS wh_2,
+                FLOOR(wh_3 / 1000) AS wh_3
+            FROM jnmc_all_kwh
+            WHERE DATE(dt_time) = DATE(? + INTERVAL 1 day)
+            AND HOUR = 0
+            AND HOST = ?
+            AND device_id = ?
+        ) q2
+    
+    ON q1.device_id = q2.device_id
+    
+    UNION
+    
+    SELECT
+        HOUR(next_dt_time) AS HOUR,
+        next_dt_time AS dt_time,
+        HOST,
+        device_id,
+         FLOOR(value / 1000) AS value,
+        FLOOR(value1 / 1000) AS value1,
+        FLOOR(value2 / 1000) AS value2,
+        FLOOR(value3 / 1000) AS value3,
+        FLOOR(value4 / 1000) AS value4,
+        FLOOR(wh_R / 1000) AS wh_R,
+        FLOOR(wh_D / 1000) AS wh_D,
+        FLOOR(wh_1 / 1000) AS wh_1,
+        FLOOR(wh_2 / 1000) AS wh_2,
+        FLOOR(wh_3 / 1000) AS wh_3
+    FROM
+        (
+            SELECT
+                dt_time,
+                HOUR,
+                HOST,
+                device_id,
+                wh_R,
+                wh_D,
+                wh_1,
+                wh_2,
+                wh_3,
+                @prev_dt_time AS next_dt_time,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_R - wh_R) AS value,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_D - wh_D) AS value1,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_1 - wh_1) AS value2,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_2 - wh_2) AS value3,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_3 - wh_3) AS value4,
+                @prev_dt_time := dt_time AS dummy,
+                @prev_wh_R := wh_R AS dummy1,
+                @prev_wh_D := wh_D AS dummy2,
+                @prev_wh_1 := wh_1 AS dummy3,
+                @prev_wh_2 := wh_2 AS dummy4,
+                @prev_wh_3 := wh_3 AS dummy5
+            FROM
+                (
+                    SELECT
+                        dt_time,
+                        HOUR,
+                        HOST,
+                        device_id,
+                        wh_R,
+                        wh_D,
+                        wh_1,
+                        wh_2,
+                        wh_3
+                    FROM
+                        jnmc_all_kwh
+                    WHERE
+                        DATE(dt_time) = ?
+                    AND HOST = ?
+                    AND device_id = ?
+                    ORDER BY
+                        dt_time DESC
+                ) AS reversed_subquery,
+                (SELECT @prev_dt_time := NULL, @prev_wh_R := NULL, @prev_wh_D := NULL, @prev_wh_1 := NULL, @prev_wh_2 := NULL, @prev_wh_3 := NULL) AS vars
+        ) AS calculated_data
+    WHERE
+        dt_time <> (
+            SELECT
+                MAX(dt_time)
+            FROM
+                jnmc_all_kwh
+            WHERE
+                DATE(dt_time) = ?
+            AND HOST = ?
+            AND device_id = ?
+        )
+    
+    UNION
+    
+    -- This subquery fetches all rows for the selected date and device_id
+    SELECT
+        HOUR(dt_time) AS HOUR,
+        dt_time,
+        HOST,
+        device_id,
+        NULL AS VALUE,
+        NULL AS value1,
+        NULL AS value2,
+        NULL AS value3,
+        NULL AS value4,
+        FLOOR(wh_R / 1000) AS wh_R,
+        FLOOR(wh_D / 1000) AS wh_D,
+        FLOOR(wh_1 / 1000) AS wh_1,
+        FLOOR(wh_2 / 1000) AS wh_2,
+        FLOOR(wh_3 / 1000) AS wh_3
+    FROM
+        jnmc_all_kwh
+    WHERE
+        DATE(dt_time) = ?
+    AND HOST = ?
+    AND device_id = ?
+    
+    ORDER BY
+        dt_time) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sawangi_biller.jnmc_all_kwh' doesn't exist (SQL: 
+        SELECT
+        HOUR(q2.dt_time) AS HOUR,
+        q2.dt_time,
+        q2.HOST,
+        q2.device_id,
+        q2.wh_R - q1.wh_R AS value,
+        q2.wh_D - q1.wh_D AS value1,
+        q2.wh_1 - q1.wh_1 AS value2,
+        q2.wh_2 - q1.wh_2 AS value3,
+         q2.wh_3 - q1.wh_3 AS value4,
+        q1.wh_R  AS wh_R,
+        q1.wh_D  AS wh_D,
+        q1.wh_1  AS wh_1,
+        q1.wh_2  AS wh_2,
+        q1.wh_3  AS wh_3
+    FROM
+        (
+            SELECT dt_time, HOUR, HOST, device_id,
+               FLOOR(wh_R/1000 ) AS wh_R,  
+                FLOOR(wh_D / 1000) AS wh_D, 
+               FLOOR(wh_1 / 1000) AS wh_1,
+                FLOOR(wh_2 / 1000) AS wh_2,
+             FLOOR(wh_3 / 1000) AS wh_3
+            FROM jnmc_all_kwh
+            WHERE DATE(dt_time) = ? 
+            AND HOUR = 23
+            AND HOST = ?
+            AND device_id = ?
+        ) q1
+    
+    LEFT JOIN
+    
+        (
+            SELECT dt_time, HOUR, HOST, device_id, 
+               FLOOR(wh_R/1000 ) AS wh_R, 
+               FLOOR(wh_D / 1000) AS wh_D,
+                FLOOR(wh_1 / 1000) AS wh_1,
+                FLOOR(wh_2 / 1000) AS wh_2,
+                FLOOR(wh_3 / 1000) AS wh_3
+            FROM jnmc_all_kwh
+            WHERE DATE(dt_time) = DATE(? + INTERVAL 1 day)
+            AND HOUR = 0
+            AND HOST = ?
+            AND device_id = ?
+        ) q2
+    
+    ON q1.device_id = q2.device_id
+    
+    UNION
+    
+    SELECT
+        HOUR(next_dt_time) AS HOUR,
+        next_dt_time AS dt_time,
+        HOST,
+        device_id,
+         FLOOR(value / 1000) AS value,
+        FLOOR(value1 / 1000) AS value1,
+        FLOOR(value2 / 1000) AS value2,
+        FLOOR(value3 / 1000) AS value3,
+        FLOOR(value4 / 1000) AS value4,
+        FLOOR(wh_R / 1000) AS wh_R,
+        FLOOR(wh_D / 1000) AS wh_D,
+        FLOOR(wh_1 / 1000) AS wh_1,
+        FLOOR(wh_2 / 1000) AS wh_2,
+        FLOOR(wh_3 / 1000) AS wh_3
+    FROM
+        (
+            SELECT
+                dt_time,
+                HOUR,
+                HOST,
+                device_id,
+                wh_R,
+                wh_D,
+                wh_1,
+                wh_2,
+                wh_3,
+                @prev_dt_time AS next_dt_time,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_R - wh_R) AS value,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_D - wh_D) AS value1,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_1 - wh_1) AS value2,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_2 - wh_2) AS value3,
+                IF(@prev_dt_time IS NULL, NULL, @prev_wh_3 - wh_3) AS value4,
+                @prev_dt_time := dt_time AS dummy,
+                @prev_wh_R := wh_R AS dummy1,
+                @prev_wh_D := wh_D AS dummy2,
+                @prev_wh_1 := wh_1 AS dummy3,
+                @prev_wh_2 := wh_2 AS dummy4,
+                @prev_wh_3 := wh_3 AS dummy5
+            FROM
+                (
+                    SELECT
+                        dt_time,
+                        HOUR,
+                        HOST,
+                        device_id,
+                        wh_R,
+                        wh_D,
+                        wh_1,
+                        wh_2,
+                        wh_3
+                    FROM
+                        jnmc_all_kwh
+                    WHERE
+                        DATE(dt_time) = ?
+                    AND HOST = ?
+                    AND device_id = ?
+                    ORDER BY
+                        dt_time DESC
+                ) AS reversed_subquery,
+                (SELECT @prev_dt_time := NULL, @prev_wh_R := NULL, @prev_wh_D := NULL, @prev_wh_1 := NULL, @prev_wh_2 := NULL, @prev_wh_3 := NULL) AS vars
+        ) AS calculated_data
+    WHERE
+        dt_time <> (
+            SELECT
+                MAX(dt_time)
+            FROM
+                jnmc_all_kwh
+            WHERE
+                DATE(dt_time) = ?
+            AND HOST = ?
+            AND device_id = ?
+        )
+    
+    UNION
+    
+    -- This subquery fetches all rows for the selected date and device_id
+    SELECT
+        HOUR(dt_time) AS HOUR,
+        dt_time,
+        HOST,
+        device_id,
+        NULL AS VALUE,
+        NULL AS value1,
+        NULL AS value2,
+        NULL AS value3,
+        NULL AS value4,
+        FLOOR(wh_R / 1000) AS wh_R,
+        FLOOR(wh_D / 1000) AS wh_D,
+        FLOOR(wh_1 / 1000) AS wh_1,
+        FLOOR(wh_2 / 1000) AS wh_2,
+        FLOOR(wh_3 / 1000) AS wh_3
+    FROM
+        jnmc_all_kwh
+    WHERE
+        DATE(dt_time) = ?
+    AND HOST = ?
+    AND device_id = ?
+    
+    ORDER BY
+        dt_time) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sawangi_biller.jnmc_all_kwh' doesn't exist at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:326)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...', Array)
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Testcontroller.php(175): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\testcontroller->generate_report(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('generate_report', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\testcontroller), 'generate_report')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 14:42:09] asus.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%s AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_i...' at line 20 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE %s AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE %s AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE %s AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE %s AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%s AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_i...' at line 20 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE %s AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE %s AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE %s AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE %s AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%s AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_i...' at line 20 at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:326)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 14:44:06] asus.ERROR: SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 2031  at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:330)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 14:44:09] asus.ERROR: SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 2031  at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:330)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 14:59:55] asus.ERROR: SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 2031  at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:330)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 15:00:01] asus.ERROR: SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 2031  at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:330)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 15:01:56] asus.ERROR: SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id = ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id = ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id = ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id = ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 2031  (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id = ? AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id = ? AND r.device_id != 31 AND MONTH(r.dt_time) = 10
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id = ? AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id = ? AND n.device_id = 31 AND MONTH(n.dt_time) = 10
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 2031  at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:330)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 15:13:12] asus.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+   ...' at line 21 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'durga?Month=9%' AND h.device_id != 31 AND MONTH(h.dt_time) = 
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE 'durga?Month=9%' AND r.device_id != 31 AND MONTH(r.dt_time) = +1
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE 'durga?Month=9%' AND w.device_id = 31 AND MONTH(w.dt_time) = 
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE 'durga?Month=9%' AND n.device_id = 31 AND MONTH(n.dt_time) = +1
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+   ...' at line 21 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'durga?Month=9%' AND h.device_id != 31 AND MONTH(h.dt_time) = 
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE 'durga?Month=9%' AND r.device_id != 31 AND MONTH(r.dt_time) = +1
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE 'durga?Month=9%' AND w.device_id = 31 AND MONTH(w.dt_time) = 
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE 'durga?Month=9%' AND n.device_id = 31 AND MONTH(n.dt_time) = +1
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+   ...' at line 21 at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:326)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 15:16:57] asus.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+   ...' at line 21 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'durga?Month=9%' AND h.device_id != 31 AND MONTH(h.dt_time) = 
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE 'durga?Month=9%' AND r.device_id != 31 AND MONTH(r.dt_time) = +1
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE 'durga?Month=9%' AND w.device_id = 31 AND MONTH(w.dt_time) = 
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE 'durga?Month=9%' AND n.device_id = 31 AND MONTH(n.dt_time) = +1
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+   ...' at line 21 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'durga?Month=9%' AND h.device_id != 31 AND MONTH(h.dt_time) = 
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE 'durga?Month=9%' AND r.device_id != 31 AND MONTH(r.dt_time) = +1
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE 'durga?Month=9%' AND w.device_id = 31 AND MONTH(w.dt_time) = 
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE 'durga?Month=9%' AND n.device_id = 31 AND MONTH(n.dt_time) = +1
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'J8' AND h.device_id = 20 AND MONTH(h.dt_time) = 
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+   ...' at line 21 at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:326)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(78): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData(Object(Illuminate\\Http\\Request))
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 15:36:09] asus.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '21} AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1' at line 56 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'indira%' AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE 'indira%' AND r.device_id != 31 AND MONTH(r.dt_time) = 9+1
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE 'indira%' AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE 'indira%' AND n.device_id = 31 AND MONTH(n.dt_time) = 9+1
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE '{ j8}' AND h.device_id = { 21} AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '21} AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1' at line 56 (SQL: 
+        SELECT 
+        q1.hoste_name AS client_id, -- Include the client_id column
+        ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS Room_con,
+        (ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff) AS Net,
+        q5.Gen,
+        ((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen) AS Hostel_Load, 
+        ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2) AS CA,
+            ROUND(((ROUND((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen, 2) - ROUND(
+            (SUM(q2.Min_WH21 - q1.Min_WH1 + q2.Min_WH22 - q1.Min_WH2 + q2.Min_WH23 - q1.Min_WH3) / 1000),2))/((ROUND((q4.Min_WhR2 - q3.Min_WhR) / 1000, 2) - q3.Diff)+ q5.Gen))*100,0) AS Ca_par
+        
+    FROM
+    (
+        SELECT h.device_id,h.client_id AS hoste_name, 
+               MIN(h.wh_1) AS Min_WH1, 
+               MIN(h.wh_2) AS Min_WH2, 
+               MIN(h.wh_3) AS Min_WH3
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE 'indira%' AND h.device_id != 31 AND MONTH(h.dt_time) = 9
+        GROUP BY h.device_id
+    ) q1
+    JOIN
+    (
+        SELECT r.device_id, 
+               MIN(r.wh_1) AS Min_WH21, 
+               MIN(r.wh_2) AS Min_WH22, 
+               MIN(r.wh_3) AS Min_WH23
+        FROM hourly_kwh r
+        WHERE r.client_id LIKE 'indira%' AND r.device_id != 31 AND MONTH(r.dt_time) = 9+1
+        GROUP BY r.device_id
+    ) q2
+    ON q1.device_id = q2.device_id
+    JOIN
+    (
+        SELECT w.device_id, 
+               MIN(w.wh_R) AS Min_WhR,
+               (MAX(CASE WHEN w.wh_D != 0 THEN w.wh_D END) - MIN(w.wh_D)) / 1000 AS Diff
+        FROM hourly_kwh w
+        WHERE w.client_id LIKE 'indira%' AND w.device_id = 31 AND MONTH(w.dt_time) = 9
+        GROUP BY w.device_id,client_id
+    ) q3
+    JOIN
+    (
+        SELECT n.device_id, 
+               MIN(n.wh_R) AS Min_WhR2
+        FROM hourly_kwh n
+        WHERE n.client_id LIKE 'indira%' AND n.device_id = 31 AND MONTH(n.dt_time) = 9+1
+        GROUP BY n.device_id ,client_id
+    ) q4
+    ON q3.device_id = q4.device_id
+    LEFT JOIN 
+    (
+        SELECT (MAX(h.wh_R) - MIN(h.wh_R)) / 1000 AS Gen
+        FROM hourly_kwh h
+        WHERE h.client_id LIKE '{ j8}' AND h.device_id = { 21} AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1;
+        ) at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '21} AND MONTH(h.dt_time) = 9
+    ) q5
+    ON 1=1' at line 56 at F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:326)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('\
+        SELECT...', Array, Object(Closure))
+#1 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('\
+        SELECT...', Array, Object(Closure))
+#2 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php(349): Illuminate\\Database\\Connection->select('\
+        SELECT...')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Database\\DatabaseManager->__call('select', Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(79): Illuminate\\Support\\Facades\\Facade::__callStatic('select', Array)
+#5 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData('indira', '9')
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#48 {main}
+"} 
+[2023-10-18 16:34:08] asus.ERROR: Undefined property: stdClass::$Hostel_Load {"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$Hostel_Load at F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php:180)
+[stacktrace]
+#0 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(180): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', 'F:\\\\wardha\\\\Sawan...', 180, Array)
+#1 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Controllers\\Monthly_Report_Controller.php(144): App\\Http\\Controllers\\Monthly_Report_Controller->generate_html(Array, 'Durga')
+#2 [internal function]: App\\Http\\Controllers\\Monthly_Report_Controller->gethostelData('Durga', '9')
+#3 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#4 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('gethostelData', Array)
+#5 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Monthly_Report_Controller), 'gethostelData')
+#6 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#7 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#8 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#14 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#18 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#19 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#20 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#21 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#22 F:\\wardha\\Sawangi_Biller_Backend\\app\\Http\\Middleware\\CORS.php(20): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 F:\\wardha\\Sawangi_Biller_Backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#43 F:\\wardha\\Sawangi_Biller_Backend\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#44 F:\\wardha\\Sawangi_Biller_Backend\\server.php(21): require_once('F:\\\\wardha\\\\Sawan...')
+#45 {main}
+"} 

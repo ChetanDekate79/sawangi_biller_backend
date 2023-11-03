@@ -9,10 +9,11 @@
 	 <button id="downloadPdfBtn" class="btn btn-primary">Download PDF</button>
     <div id="reportContent">
         <!-- Include the report display HTML here -->
-        {!! $htmlContent !!}
+        <?php echo $htmlContent; ?>
+
     </div>
-    <form id="pdfDownloadForm" action="{{ route('bill_pdf') }}" method="POST" style="display: none;">
-        @csrf
+    <form id="pdfDownloadForm" action="<?php echo e(route('bill_pdf')); ?>" method="POST" style="display: none;">
+        <?php echo csrf_field(); ?>
         <input type="hidden" name="htmlContent" id="htmlContentInput">
     </form>
    
@@ -43,7 +44,7 @@
 
         document.getElementById("downloadPdfBtn").addEventListener("click", function() {
             // Get the HTML content from the report display
-            var htmlContent = {!! json_encode($htmlContent) !!};
+            var htmlContent = <?php echo json_encode($htmlContent); ?>;
             
             // Set the HTML content in the hidden input field
             document.getElementById("htmlContentInput").value = htmlContent;
@@ -82,4 +83,4 @@
 
     </script>
 </body>
-</html>
+</html><?php /**PATH F:\wardha\Sawangi_Biller_Backend\resources\views/billing_report.blade.php ENDPATH**/ ?>
