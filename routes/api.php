@@ -18,9 +18,12 @@ use App\Http\Controllers\Student_noconsumption_report_Controller;
 use App\Http\Controllers\Billing_Report_Controller;
 use App\Http\Controllers\demo_controller;
 use App\Http\Controllers\Monthly_Report_Controller;
+use App\Http\Controllers\Bill_Controller;
+
+Route::get('/monthly-bill/{hostel}/{room}/{month}/{year}/{rate}/{comm_area}', [Bill_Controller::class, 'Monthly_Bill']);
+
 
 Route::get('/room-list/{hostel}', [Billing_Report_Controller::class, 'getDistinctRoomNumbers']);
-
 
 Route::get('/monthly_consumption_report/{client_id}/{Month}/{Year}', [Monthly_Report_Controller::class, 'gethostelData']);
 

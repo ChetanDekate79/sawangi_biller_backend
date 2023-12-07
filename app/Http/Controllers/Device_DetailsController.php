@@ -51,6 +51,9 @@ class Device_DetailsController extends Controller
     
         // Execute the query
         $results = DB::select($query);
+
+        // Manually add "all" to the result and place it at the beginning
+        array_unshift($results, (object) ['room_no' => 'All']);
     
         // Return the results
         return $results;

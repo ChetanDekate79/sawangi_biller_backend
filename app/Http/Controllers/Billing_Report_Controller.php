@@ -37,7 +37,7 @@ class Billing_Report_Controller extends Controller
     set_time_limit(600); 
     
     {
-        if ($room === 'all') {
+        if ($room === 'All') {
             $roomNumbers = $this->getDistinctRoomNumbers($hostel);
             $finalResult = [];
     
@@ -58,22 +58,38 @@ class Billing_Report_Controller extends Controller
 
 public function billing_report_monthly($hostel,$room,$start_date,$end_date,$rate,$comm_area)
 {
+    $studentIdsQuery = "SELECT DISTINCT S.student_id FROM (SELECT sa.student_id, sa.joining_date, sa.leaving_date, DATE(hk.dt_time) AS d_t FROM rooms r
+    LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
+    LEFT JOIN room_mfd rm ON rm.room_id = sa.room_id
+    LEFT JOIN hourly_kwh hk ON hk.client_id = rm.client_id AND hk.device_id = rm.device_id
+    WHERE DATE(hk.dt_time) BETWEEN $start_date AND $end_date AND r.hostel_id = 'durga'
+    AND (sa.joining_date IS NULL OR sa.joining_date > $start_date )
+    AND (sa.leaving_date IS NULL OR sa.leaving_date < $end_date)) S";
+
+    // Execute the query to get studentIds
+$studentIdsResult = DB::select($studentIdsQuery);
+
+// Extract student IDs from the result
+$studentIds = [];
+foreach ($studentIdsResult as $row) {
+    $studentIds[] = $row->student_id;
+}
 
     set_time_limit(600); 
     
     {
-        if ($room === 'all') {
+        if ($room === 'All') {
             $roomNumbers = $this->getDistinctRoomNumbers($hostel);
             $finalResult = [];
     
             foreach ($roomNumbers as $roomNumber) {
-                $result = $this->fetchBillingDataForRoom_monthly($hostel, $roomNumber, $start_date, $end_date, $rate,$comm_area);
+                $result = $this->fetchBillingDataForRoom_monthly($hostel, $room, $start_date, $end_date, $rate, $comm_area, $studentIds);
                 $finalResult = array_merge($finalResult, $result);
             }
     
             $htmlContent = $this->generate_html_monthly($finalResult, $hostel, $room, $start_date, $end_date);
         } else {
-            $result = $this->fetchBillingDataForRoom_monthly($hostel, $room, $start_date, $end_date, $rate,$comm_area);
+            $result = $this->fetchBillingDataForRoom_monthly($hostel, $room, $start_date, $end_date, $rate,$comm_area, $studentIds);
             $htmlContent = $this->generate_html_monthly($result, $hostel, $room, $start_date, $end_date);
         }
     
@@ -207,7 +223,7 @@ $result = DB::select($query,[$rate, $rate,$start_date, $end_date, $hostel,$room,
 
     return $result;
 }
-	public function fetchBillingDataForRoom_monthly($hostel,$room,$start_date,$end_date,$rate,$comm_area){
+	public function fetchBillingDataForRoom_monthly($hostel,$room,$start_date,$end_date,$rate,$comm_area, $studentIds){
 
         $query = "
 		SELECT 
@@ -219,6 +235,7 @@ $result = DB::select($query,[$rate, $rate,$start_date, $end_date, $hostel,$room,
     sum(Z.Amount) AS SUM,
     Z.common_area,
     Z.total_days,
+	Z.common_area * Z.total_days as ca_amount,
     sum(Z.Amount) +( Z.total_days * Z.common_area) AS Total_Amount
 FROM (
     SELECT *,
@@ -316,9 +333,11 @@ FROM (
   
     AND r.hostel_id = ?
     AND r.room_no = ?
+	and hk.device_id <> 31
     AND (sa.leaving_date IS NULL OR sa.leaving_date >= DATE(hk.dt_time))
     -- Add the condition to exclude student_id based on joining_date
     AND (sa.joining_date IS NULL OR sa.joining_date <= DATE(hk.dt_time))
+    AND sa.student_id IN (?)
   GROUP BY DATE(hk.dt_time), hk.client_id, hk.device_id, rm.phase, r.room_no, sa.student_id
 ) A
 LEFT JOIN (
@@ -330,16 +349,17 @@ LEFT JOIN (
    LEFT JOIN students_allotment sa ON sa.room_id = r.room_id
    LEFT JOIN room_mfd rm ON rm.room_id = sa.room_id
    LEFT JOIN hourly_kwh hk ON hk.client_id = rm.client_id AND hk.device_id = rm.device_id
-   WHERE r.hostel_id = ?   AND  r.room_no = ?
+   WHERE r.hostel_id = ?   AND  r.room_no = ?  and hk.device_id <> 31
      AND (sa.leaving_date IS NULL OR sa.leaving_date >= DATE(hk.dt_time))
      AND (sa.joining_date IS NULL OR sa.joining_date <= DATE(hk.dt_time))
       and DATE(hk.dt_time) BETWEEN ? AND ?
  GROUP BY dt_time2 
  ) sc
  ON A.room_id = sc.room_id2 AND A.dt_time = sc.dt_time2
-ORDER BY DATE(A.dt_time)) Z GROUP BY Z.student_id";
+ORDER BY DATE(A.dt_time)) Z GROUP BY Z.student_id
+";
 
-    $result = DB::select($query,[$rate, $rate, $comm_area,$start_date, $end_date, $hostel,$room,$hostel,$room,$start_date,$end_date]);
+    $result = DB::select($query,[$rate, $rate, $comm_area,$start_date, $end_date, $studentIds ,$hostel,$room,$hostel,$room,$start_date,$end_date]);
 
     // //return response()->json($result);
     // $htmlContent = $this->generate_html_monthly($result,$hostel,$room,$start_date,$end_date);
@@ -375,7 +395,22 @@ ORDER BY DATE(A.dt_time)) Z GROUP BY Z.student_id";
         // $sum_ryb += $value->sum_ryb;
         // $sum_total += ($value->sum_total ?? 0);
         // $sum_common_area += ($value->common_area ?? 0);
+			
+			 DB::table('daily_bill')->updateOrInsert(
+            ['date' =>  $value->dt_time,
+            'hostel_id' => $value->hostel_id,
+            'room_no' => $value->room_no ,
+            'student_id' => $value->student_id,],
+            [
+            'units' => $value->each_unit,
+            'total_amt' => $value->amount,
+                // Add other columns and their values here as needed
+            ]
+        );
         }
+		
+		
+		
         // Calculate the percentage
     // $percentage = round(($sum_common_area / $sum_total) * 100, 0);
         // Add a row for the total
@@ -490,6 +525,7 @@ ORDER BY DATE(A.dt_time)) Z GROUP BY Z.student_id";
         $tableRows = '';
         $sum_units = 0;
         $sum_total = 0;
+		$common_area_total = 0;
         $Amount_total = 0;
 
         foreach ($results as $value) {
@@ -511,8 +547,35 @@ ORDER BY DATE(A.dt_time)) Z GROUP BY Z.student_id";
             // Accumulate the sum for each column
          $sum_units += $value->Units;
          $sum_total += ($value->SUM ?? 0);
+		 $common_area_total += ($value->ca_amount ?? 0);
          $Amount_total += ($value->Total_Amount ?? 0);
+			
+			// Calculate the distinct room_no count and student_id count
+        $distinctRoomNumbers[$value->room_no] = true;
+        $distinctStudentIds[$value->student_id] = true;
+
+        // To get the counts, use count() function on the arrays after processing all the records.
+        $distinctRoomCount = count($distinctRoomNumbers);
+        $distinctStudentCount = count($distinctStudentIds);
         }
+		
+		if ($distinctRoomCount > 1) {
+   DB::table('monthly_bill')->updateOrInsert(
+    ['start' => $start_date, 'end' => $end_date, 'hostel_id' => $hostel],
+    [
+        'hostel_room_units' => $sum_units,
+        'bill_amt' => $sum_total,
+        'bill_ca_amt' => $common_area_total,
+        'student_count' => $distinctStudentCount,
+        'room_count' => $distinctRoomCount,
+        'total_bill_amt' => $Amount_total,
+        // Add other columns and their values here as needed
+    ]
+);
+
+}
+
+		
         // Calculate the percentage
     // $percentage = round(($sum_common_area / $sum_total) * 100, 0);
         // Add a row for the total

@@ -13,11 +13,13 @@ class Hourly_Graph_Controller extends Controller
       q2.hour,
       q2.client_Id,
       q2.device_id,
+      ROUND(ABS(q1.wh_r - q2.wh_r)) AS value0,
+      ROUND(ABS(q1.wh_d - q2.wh_d)) AS value1,
       ROUND(ABS(q1.wh_1 - q2.wh_1)) AS value2,
       ROUND(ABS(q1.wh_2 - q2.wh_2)) AS value3,
       ROUND(ABS(q1.wh_3 - q2.wh_3)) AS value4
   FROM
-      (SELECT dt_time, HOUR, client_Id, device_id, wh_1, wh_2, wh_3
+      (SELECT dt_time, HOUR, client_Id, device_id,wh_r,wh_d,wh_1, wh_2, wh_3
        FROM hourly_kwh
        WHERE DATE(dt_time) = ?
          AND HOUR = 23
@@ -26,7 +28,7 @@ class Hourly_Graph_Controller extends Controller
   
   LEFT JOIN
   
-      (SELECT dt_time, HOUR, client_Id, device_id, wh_1, wh_2, wh_3
+      (SELECT dt_time, HOUR, client_Id, device_id, wh_r,wh_d,wh_1, wh_2, wh_3
        FROM hourly_kwh
        WHERE DATE(dt_time) = DATE(? + INTERVAL 1 DAY)
          AND HOUR = 0
@@ -43,6 +45,8 @@ SELECT
     HOUR,
     client_id,
     device_id,
+    wh_r - COALESCE((SELECT wh_r FROM hourly_kwh h2 WHERE h2.dt_time < h1.dt_time AND h2.client_id = ? AND h2.device_id = ? ORDER BY h2.dt_time DESC LIMIT 1), 0) AS diff_wh_r,
+    wh_d - COALESCE((SELECT wh_d FROM hourly_kwh h2 WHERE h2.dt_time < h1.dt_time AND h2.client_id = ? AND h2.device_id = ? ORDER BY h2.dt_time DESC LIMIT 1), 0) AS diff_wh_d,
     wh_1 - COALESCE((SELECT wh_1 FROM hourly_kwh h2 WHERE h2.dt_time < h1.dt_time AND h2.client_id = ? AND h2.device_id = ? ORDER BY h2.dt_time DESC LIMIT 1), 0) AS diff_wh_1,
     wh_2 - COALESCE((SELECT wh_2 FROM hourly_kwh h2 WHERE h2.dt_time < h1.dt_time AND h2.client_id = ? AND h2.device_id = ? ORDER BY h2.dt_time DESC LIMIT 1), 0) AS diff_wh_2,
     wh_3 - COALESCE((SELECT wh_3 FROM hourly_kwh h2 WHERE h2.dt_time < h1.dt_time AND h2.client_id = ? AND h2.device_id = ? ORDER BY h2.dt_time DESC LIMIT 1), 0) AS diff_wh_3
@@ -55,7 +59,7 @@ WHERE
 ORDER BY 
     dt_time";
 
-      $result = DB::select($query, [$date, $host, $device, $date, $host, $device,  $host, $device, $host, $device, $host, $device, $date, $host, $device]);
+      $result = DB::select($query, [$date, $host, $device, $date, $host, $device, $host, $device,$host, $device, $host, $device, $host, $device, $host, $device, $date, $host, $device]);
 
       $filteredResult = [];
         $prevHour = null;

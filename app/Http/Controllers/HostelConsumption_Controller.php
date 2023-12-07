@@ -14,9 +14,27 @@ class HostelConsumption_Controller extends Controller
         $client_id = strtolower($request->input('client_id'));  // Convert client_id to lowercase
 
         // Modify $client_id based on conditions
-        $client_id2 = ($client_id === 'radhika') ? 'j8' : (($client_id === 'indira') ? 'j8' : "");
-         // Set device_id_new based on client_id
-        $device_id_new = ($client_id === 'radhika') ? 20 : (($client_id === 'indira') ? 21 : 0);
+        // $client_id2 = ($client_id === 'radhika') ? 'j8' : (($client_id === 'indira') ? 'j8' : "");
+        //  // Set device_id_new based on client_id
+        // $device_id_new = ($client_id === 'radhika') ? 20 : (($client_id === 'indira') ? 21 : 0);
+
+        $get_date = "SELECT sg.client_id,sg.device_id FROM solar_gen sg WHERE sg.hostel= '$client_id' ";
+
+        $get_results = DB::select($get_date); 
+
+        // Check if any results are returned
+    if (!empty($get_results)) {
+        // Access the first result since it's an array
+        $client_id2 = $get_results[0]->client_id;
+        $device_id_new = $get_results[0]->device_id;
+
+        // Now you can use $client_id2 and $device_id_new as needed
+    } else {
+        // Handle the case when no results are found
+        $client_id2 = "";
+        $device_id_new = 0;
+    }
+
 
        
 
@@ -177,6 +195,9 @@ ORDER BY
         $results = DB::select($query, [ $date,$client_id, $date, $client_id,$date,$client_id, $date, $client_id,$date,$client_id2,$device_id_new,$date,$client_id2,$device_id_new,$client_id2,$device_id_new,$date,$client_id2,$device_id_new]);
 
         return response()->json($results);
+
+                // return response()->json([$get_results,$client_id2,$device_id_new]);
+
 
         // return response()->json([$client_id2,$device_id_new,$results]);
 
